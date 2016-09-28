@@ -45,10 +45,12 @@ section {
 
 .filter {
   padding: 1em;
-  border: 1px solid coral;
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media (max-width: 766px) {
+    .filter {
+      flex-wrap: wrap; } }
   .filter img {
     max-height: 39px; }
   .filter ul {
@@ -70,9 +72,10 @@ section {
   .filter input {
     padding: .5em 1em .5em 2.5em;
     border: 1px solid rgba(173, 173, 173, 0.3);
-    background: url("/assets/lupe.png") no-repeat scroll 7px 7px;
-    /*    @media (min-width: 766px){
-          display: block;
-        }*/ }
+    background: url("/assets/lupe.png") no-repeat scroll 7px 7px; }
+    @media (max-width: 766px) {
+      .filter input {
+        flex: 1 1;
+        margin-top: 1em; } }
 
 /*# sourceMappingURL=styles.css.map */
