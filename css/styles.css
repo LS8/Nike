@@ -90,13 +90,15 @@ section {
   align-items: flex-end; }
   @media (max-width: 544px) {
     .jumbo {
-      align-items: center; } }
+      align-items: center;
+      justify-content: flex-start; } }
 
 hgroup {
   margin-right: 2em; }
   @media (max-width: 544px) {
     hgroup {
-      margin-right: 0; } }
+      margin-right: 0;
+      text-align: center; } }
 
 h1 {
   letter-spacing: 5px;
@@ -110,5 +112,23 @@ h2 {
   margin-right: 2em;
   font-weight: normal;
   letter-spacing: 3px; }
+
+button {
+  cursor: pointer;
+  background: #333;
+  border: 0;
+  padding: 1em 4em;
+  margin-top: 1em;
+  transition: 0.3s; }
+  button:first-of-type {
+    margin-right: .5em; }
+  button:hover {
+    opacity: .9; }
+  button a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px; }
 
 /*# sourceMappingURL=styles.css.map */
