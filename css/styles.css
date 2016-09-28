@@ -1,4 +1,28 @@
 body {
-  font-family: "Oswald", sans-serif; }
+  font-family: "Oswald", sans-serif;
+  margin: 0; }
+
+header {
+  display: flex;
+  height: 3em;
+  border: 1px solid rgba(173, 173, 173, 0.3);
+  justify-content: space-between;
+  align-items: center; }
+  header ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    color: #adadad;
+    list-style-type: none; }
+    header ul:first-child li:not(:first-child) a {
+      border-left: 1px solid rgba(173, 173, 173, 0.3);
+      border-right: 1px solid rgba(173, 173, 173, 0.3); }
+  header a {
+    padding: .5em 1em;
+    text-decoration: none;
+    color: #adadad;
+    transition: 0.3s; }
+    header a:hover {
+      color: #333; }
 
 /*# sourceMappingURL=styles.css.map */
