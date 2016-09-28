@@ -8,15 +8,30 @@ header {
   border: 1px solid rgba(173, 173, 173, 0.3);
   justify-content: space-between;
   align-items: center; }
+  @media (max-width: 544px) {
+    header {
+      flex-direction: row;
+      height: auto;
+      align-items: center; } }
   header ul {
     margin: 0;
     padding: 0;
     display: flex;
     color: #adadad;
     list-style-type: none; }
-    header ul:first-child li:not(:first-child) a {
-      border-left: 1px solid rgba(173, 173, 173, 0.3);
-      border-right: 1px solid rgba(173, 173, 173, 0.3); }
+    @media (min-width: 545px) {
+      header ul:first-child li:not(:first-child) a {
+        border-left: 1px solid rgba(173, 173, 173, 0.3);
+        border-right: 1px solid rgba(173, 173, 173, 0.3); } }
+    @media (max-width: 544px) {
+      header ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        align-items: center; }
+        header ul a {
+          border: 0; } }
   header a {
     padding: .5em 1em;
     text-decoration: none;
@@ -24,5 +39,8 @@ header {
     transition: 0.3s; }
     header a:hover {
       color: #333; }
+
+.section {
+  margin-top: 2em; }
 
 /*# sourceMappingURL=styles.css.map */
