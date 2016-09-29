@@ -1,4 +1,11 @@
 $black: #333;
+%primary-links {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+}
 body {
   font-family: "Oswald", sans-serif;
   margin: 0;
@@ -67,6 +74,20 @@ section {
   ul {
     list-style-type: none;
     display: flex;
+    padding: 0;
+    align-items: center;
+    @media (max-width: 544px){
+      padding: 0;
+      flex-wrap: wrap;
+    }
+    li {
+      @media (max-width: 544px){
+        margin-bottom: 1em;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
     a {
       text-transform: uppercase;
       text-decoration: none;
@@ -110,9 +131,7 @@ section {
   }
 }
 hgroup {
-  margin-right: 2em;
   @media (max-width: 544px){
-    margin-right: 0;
     text-align: center;
   }
 }
@@ -138,15 +157,91 @@ button {
   transition: 0.3s;
   &:first-of-type {
     margin-right: .5em;
+    @media (max-width: 544px){
+      margin-right: 0;
+    }
   }
   &:hover {
     opacity: .9;
   }
   a {
-    color: white;
+    @extend %primary-links;
+  }
+}
+
+
+footer {
+  background: $black;
+  display: flex;
+  justify-content: space-around;
+  @media (max-width: 544px){
+    flex-direction: column-reverse;
+  }
+  ul {
+    list-style-type: none;
+    @media (max-width: 544px){
+      padding: 0;
+      &:not(:last-child){
+        margin-right: 1em;
+      }
+    }
+  }
+}
+.internal-links {
+  display: flex;
+  ul:first-child a {
+    @extend %primary-links;
+  }
+  ul:nth-child(2) a,
+  ul:nth-child(3) a {
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 16px;
+    font-size: 12px;
+    color: #adadad;
+  }
+  ul:nth-child(2) li:first-child a {
+    @extend %primary-links;
+  }
+  ul:nth-child(3) li:first-child a,
+  ul:nth-child(3) li:nth-child(2) a  {
+    @extend %primary-links;
+  }
+}
+.social-links {
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+  ul >li:first-child {
+    @extend %primary-links;
+    align-self: flex-end;
+    @media (max-width: 544px){
+      align-self: center;
+    }
+  }
+  .wrap {
+    display: flex;
+    @media (max-width: 544px){
+      justify-content: center;
+    }
+    li {
+      margin: .5em;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    li a {
+      text-decoration: none;
+      color: $black;
+      
+    }
+    i {
+      color: $black;
+      background: #adadad;
+      font-size: 1.4em;
+      width: 1.4em;
+      text-align: center;
+      line-height: 1.4em;
+      border-radius: 0.8em;
+    }
   }
 }
