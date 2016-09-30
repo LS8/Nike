@@ -1,19 +1,42 @@
 .internal-links {
   display: flex;
+  @media (max-width: 544px){
+      align-self: center;
+    }
   ul:first-child a {
     @extend %primary-links;
+    border-bottom: 1px solid $black;
+    transition: .3s;
+    &:hover {
+      border-bottom-color: white;
+    }
   }
   ul:nth-child(2) a,
   ul:nth-child(3) a {
     text-decoration: none;
     font-size: 12px;
     color: #adadad;
+    border-bottom: 1px solid $black;
+    transition: .3s;
+    &:hover {
+      border-bottom-color: #adadad;
+    }
   }
   ul:nth-child(2) li:first-child a {
     @extend %primary-links;
+    border-bottom: 1px solid $black;
+    transition: .3s;
+    &:hover {
+      border-bottom-color: white;
+    }
   }
   ul:nth-child(3) li:first-child a,
   ul:nth-child(3) li:nth-child(2) a  {
     @extend %primary-links;
+    border-bottom: 1px solid $black;
+    transition: .3s;
+    &:hover {
+      border-bottom-color: white;
+    }
   }
 }
