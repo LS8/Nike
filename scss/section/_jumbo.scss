@@ -1,0 +1,54 @@
+.jumbo {
+  display: flex;
+  flex-direction: column;
+  background-image: url("/assets/background.jpg-large");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 870px;
+  justify-content: center;
+  align-items: flex-end;
+  @media (max-width: 544px){
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+hgroup {
+  @media (max-width: 544px){
+    text-align: center;
+  }
+}
+h1 {
+  letter-spacing: 5px;
+  margin: 0;
+  font-size: 4em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h2 {
+  margin: 0;
+  margin-right: 2em;
+  font-weight: normal;
+  letter-spacing: 3px;
+}
+button {
+  cursor: pointer;
+  background: $black;
+  border: 0;
+  padding: 1em 4em;
+  margin-top: 1em;
+  transition: 0.3s;
+  &:first-of-type {
+    margin-right: .5em;
+    @media (max-width: 544px){
+      margin-right: 0;
+    }
+  }
+  &:hover {
+    opacity: .9;
+  }
+  a {
+    @extend %primary-links;
+  }
+}

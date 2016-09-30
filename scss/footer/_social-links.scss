@@ -1,0 +1,39 @@
+.social-links {
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+  ul >li:first-child {
+    @extend %primary-links;
+    align-self: flex-end;
+    @media (max-width: 544px){
+      align-self: center;
+    }
+  }
+  .wrap {
+    display: flex;
+    @media (max-width: 544px){
+      justify-content: center;
+    }
+    li {
+      margin: .5em;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    li a {
+      text-decoration: none;
+      color: $black;
+      
+    }
+    i {
+      color: $black;
+      background: #adadad;
+      font-size: 1.4em;
+      width: 1.4em;
+      text-align: center;
+      line-height: 1.4em;
+      border-radius: 0.8em;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+footer {
+  background: $black;
+  display: flex;
+  justify-content: space-around;
+  @media (max-width: 544px){
+    flex-direction: column-reverse;
+  }
+  ul {
+    list-style-type: none;
+    @media (max-width: 544px){
+      padding: 0;
+      &:not(:last-child){
+        margin-right: 1em;
+      }
+    }
+  }
+}

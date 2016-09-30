@@ -1,0 +1,12 @@
+header {
+  display: flex;
+  height: 3em;
+  border: 1px solid rgba($color: #adadad, $alpha: .3);
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 544px){
+    flex-direction: row;
+    height: auto;
+    align-items: center;
+  }
+}
