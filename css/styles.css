@@ -101,7 +101,7 @@ section {
 .jumbo {
   display: flex;
   flex-direction: column;
-  background-image: url("/assets/background.jpg-large");
+  background-image: url("../assets/background.jpg-large");
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
